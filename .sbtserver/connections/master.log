@@ -1,0 +1,13 @@
+New log file opened at Wed Apr 08 00:03:39 PDT 2015 by 20235@Hieus-MacBook-Pro.local
+Taking next connection to: 62042
+New client attempting to connect on port: 62043-62042
+  Address = /10.0.0.2:62042
+This client on port 62043 has uuid f3697909-1f18-406c-ace5-034c8511c98b configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-f3697909-1f18-406c-ace5-034c8511c98b
+Taking next connection to: 62042
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 62042
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 62042
