@@ -8,7 +8,7 @@ import views.html.*;
 public class Application extends Controller {
 
     public static Result index() {
-        return ok(index.render("Your NEWS-ANI application is ready."));
+        return ok(index.render("Your hoho NEWS-ANI application is ready."));
     }
 
 }
