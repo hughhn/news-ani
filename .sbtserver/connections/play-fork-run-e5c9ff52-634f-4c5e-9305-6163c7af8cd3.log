@@ -63,3 +63,22 @@ Sending msg to client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3: Detach
 Sending msg to client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3: DetachedLogEvent(LogMessage(debug,> server-send-ready-for-request))
 Sending msg to client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3: BuildLoaded()
 Sending msg to client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3: DetachedLogEvent(LogMessage(debug,> server-handle-next-server-request))
+Got request: UnlistenToEvents()
+Reading next message from client.
+Sending msg to client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3: (4,ReceivedResponse())
+Got request: ListenToValue(AttributeKey[play.forkrun.protocol.ForkConfig]("playForkConfig") in Scope(Build: file:/Users/hugh_sd/Projects/news-ani/, , Project: ProjectReference(file:/Users/hugh_sd/Projects/news-ani/,root)))
+Reading next message from client.
+Got request: UnlistenToValue(AttributeKey[play.forkrun.protocol.ForkConfig]("playForkConfig") in Scope(Build: file:/Users/hugh_sd/Projects/news-ani/, , Project: ProjectReference(file:/Users/hugh_sd/Projects/news-ani/,root)))
+Reading next message from client.
+Got request: ListenToValue(AttributeKey[play.runsupport.Reloader$CompileResult]("playForkReload") in Scope(Build: file:/Users/hugh_sd/Projects/news-ani/, , Project: ProjectReference(file:/Users/hugh_sd/Projects/news-ani/,root)))
+Reading next message from client.
+Got request: UnlistenToValue(AttributeKey[play.runsupport.Reloader$CompileResult]("playForkReload") in Scope(Build: file:/Users/hugh_sd/Projects/news-ani/, , Project: ProjectReference(file:/Users/hugh_sd/Projects/news-ani/,root)))
+Reading next message from client.
+Client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3 closed, java.net.SocketException: Connection reset, shutting down
+Stopping client.
+Client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3 thread exiting.
+Dropping message (5,ReceivedResponse()) to dead client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3
+Dropping message (6,ReceivedResponse()) to dead client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3
+Dropping message (7,ReceivedResponse()) to dead client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3
+Dropping message (8,ReceivedResponse()) to dead client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3
+Dropping message (0,ReceivedResponse()) to dead client play-fork-run-e5c9ff52-634f-4c5e-9305-6163c7af8cd3
