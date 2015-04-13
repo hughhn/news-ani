@@ -1,13 +1,37 @@
-New log file opened at Wed Apr 08 23:37:53 PDT 2015 by 21894@Hieus-MacBook-Pro.local
-Taking next connection to: 65259
-New client attempting to connect on port: 65260-65259
-  Address = /10.0.0.2:65259
-This client on port 65260 has uuid 97035ccf-b5dc-43eb-9e5b-dae1457db957 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-97035ccf-b5dc-43eb-9e5b-dae1457db957
-Taking next connection to: 65259
+New log file opened at Sun Apr 12 22:46:56 PDT 2015 by 30441@Hieus-MacBook-Pro.local
+Taking next connection to: 51819
+New client attempting to connect on port: 51820-51819
+  Address = /10.0.0.2:51819
+This client on port 51820 has uuid e32916c6-de75-4d12-bd67-2019822ef17f configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-e32916c6-de75-4d12-bd67-2019822ef17f
+Taking next connection to: 51819
 Checking to see if clients are empty...
-No non-daemon clients connected after 3 min. Shutting down.
-Server socket thread exiting.
-0 clients open, will close them...
-All client sockets have been closed.
-Closing the 21894@Hieus-MacBook-Pro.local logs at Wed Apr 08 23:40:56 PDT 2015, goodbye.
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51819
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51819
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51819
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51819
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51819
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51819
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51819
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51819
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51819
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51819

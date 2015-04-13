@@ -18,7 +18,7 @@ package services
  */
 
 import securesocial.core.RuntimeEnvironment
-import securesocial.core.providers.{UsernamePasswordProvider, FacebookProvider}
+import securesocial.core.providers.{TwitterProvider, UsernamePasswordProvider, FacebookProvider}
 import securesocial.core.services.UserService
 
 import scala.collection.immutable.ListMap
@@ -28,6 +28,9 @@ class MyEnvironment extends RuntimeEnvironment.Default[User] {
   override lazy val providers = ListMap(
     include(
       new FacebookProvider(routes, cacheService,oauth2ClientFor(FacebookProvider.Facebook))
+    ),
+    include(
+      new TwitterProvider(routes, cacheService, oauth1ClientFor(TwitterProvider.Twitter))
     ),
     include(
       new UsernamePasswordProvider[User](userService, avatarService, viewTemplates, passwordHashers)

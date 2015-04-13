@@ -26,24 +26,27 @@ public class Application extends Controller {
         this.env = env;
     }
 
+    public static User getCurrentUser() {
+        return (User) ctx().args.get(SecureSocial.USER_KEY);
+    }
+
     @SecuredAction
     public Result index() {
         if(logger.isDebugEnabled()){
             logger.debug("access granted to index");
         }
-        User user = (User) ctx().args.get(SecureSocial.USER_KEY);
-        return ok(index.render(user, SecureSocial.env()));
+        return ok(index.render(getCurrentUser(), SecureSocial.env()));
     }
 
     @SecuredAction
     public Result linkResult() {
-        User current = (User) ctx().args.get(SecureSocial.USER_KEY);
+        User current = getCurrentUser();
         return ok(linkResult.render(current, current.identities));
     }
 
     @UserAwareAction
     public Result userAware() {
-        User demoUser = (User) ctx().args.get(SecureSocial.USER_KEY);
+        User demoUser = getCurrentUser();
         String userName ;
         if ( demoUser != null ) {
             BasicProfile user = demoUser.main;
