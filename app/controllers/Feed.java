@@ -1,5 +1,10 @@
 package controllers;
 
+import com.rometools.rome.feed.synd.SyndEntry;
+import com.rometools.rome.feed.synd.SyndFeed;
+import com.rometools.rome.feed.synd.SyndLink;
+import com.rometools.rome.io.FeedException;
+import com.rometools.rome.io.SyndFeedInput;
 import play.*;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -11,6 +16,11 @@ import twitter4j.*;
 import twitter4j.Logger;
 import views.html.feed;
 
+import java.io.IOError;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.*;
 
 /**
@@ -59,20 +69,44 @@ public class Feed extends Controller {
                 result = twitter.search(query);
                 tweets.addAll(result.getTweets());
             //} while ((query = result.nextQuery()) != null);
-            for (twitter4j.Status tweet : tweets) {
-                logger.debug("@" + tweet.getUser().getScreenName() + " - " + tweet.getText());
-            }
+//            for (twitter4j.Status tweet : tweets) {
+//                logger.debug("@" + tweet.getUser().getScreenName() + " - " + tweet.getText());
+//            }
 
             return tweets;
         } catch (TwitterException te) {
             te.printStackTrace();
-            System.out.println("Failed to search tweets: " + te.getMessage());
+            logger.error("getTweets() Exception: " + te.getMessage());
             return tweets;
         }
     }
+
+    public static List<SyndEntry> getSyndFeeds() {
+        List<SyndEntry> entries = new ArrayList<>();
+        try {
+            URL feedUrl = new URL("https://news.ycombinator.com/rss");
+            SyndFeedInput input = new SyndFeedInput();
+            SyndFeed feed = input.build(new InputStreamReader(feedUrl.openStream()));
+
+            //logger.debug("feed: \n" + feed);
+            entries = feed.getEntries();
+
+
+            for (SyndEntry entry : entries) {
+                logger.debug("@" + entry.getTitle() + " - " + entry.getLink());
+            }
+            return entries;
+        } catch (FeedException | IOException e) {
+            e.printStackTrace();
+            logger.error("getSyndFeeds() Exception");
+            return entries;
+        }
+
+    }
+
     @SecuredAction
     public static Result list() {
         User user = (User) ctx().args.get(SecureSocial.USER_KEY);
-        return ok(feed.render(user, getTweets()));
+        return ok(feed.render(user, getTweets(), getSyndFeeds()));
     }
 }

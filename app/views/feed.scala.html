@@ -1,4 +1,4 @@
-@(user: services.User, tweets: List[twitter4j.Status])
+@(user: services.User, tweets: List[twitter4j.Status], links: List[com.rometools.rome.feed.synd.SyndEntry])
 
 @main("ChompChomp") {
 <div class="page-header">
@@ -6,18 +6,25 @@
 </div>
 
 <div class="clearfix">
-    <h2>Feed</h2>
-
+    <h2>Twitter</h2>
 
     <ul>
     @for(tweet <- tweets) {
-
         <li><b>@tweet.getUser().getScreenName()</b>: @tweet.getText()</li>
-
     }
     </ul>
-
 </div>
 
+<br><br>
+
+<div class="clearfix">
+    <h2>Feed</h2>
+
+    <ul>
+        @for(link <- links) {
+        <li><b>@link.getTitle()</b>: <a href="@link.getLink()">@link.getLink()</a></li>
+        }
+    </ul>
+</div>
 
 }
