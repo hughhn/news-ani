@@ -138,7 +138,7 @@ public class Feed extends Controller {
         List<Item> items = new ArrayList<>();
         for (SyndEntry entry : entries) {
             Promise<JsonNode> metadataJson = getMetadata(entry.getLink());
-            items.add(new Item(entry, metadataJson.get(1000).get("content").toString()));
+            items.add(new Item(entry, metadataJson.get(1000).get("url").toString()));
         }
 
         return ok(feed.render(user, getTweets(), items));
