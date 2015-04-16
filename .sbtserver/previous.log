@@ -1,8 +1,8 @@
-New log file opened at Sun Apr 12 22:43:44 PDT 2015 by 30414@Hieus-MacBook-Pro.local
-jvm 30414@Hieus-MacBook-Pro.local
-jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=24.60-b09
-jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.7
-jvm arguments: [-Xms256m, -Xmx1024m, -XX:PermSize=64m, -XX:MaxPermSize=256m]
+New log file opened at Thu Apr 16 00:03:27 PDT 2015 by 1319@Hieus-MacBook-Pro.local
+jvm 1319@Hieus-MacBook-Pro.local
+jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.40-b25
+jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
+jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
 Starting event engine
 Starting sbt command engine
 Waiting for sbt command engine
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in /Users/hugh_sd/Projects/news-ani/project, returning: (news-ani-build)
 Loading project definition from /Users/hugh_sd/Projects/news-ani/project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@74bd6148, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@31d427d2, check cycles: false
 [info] Updating {file:/Users/hugh_sd/Projects/news-ani/project/}news-ani-build...
 Updating {file:/Users/hugh_sd/Projects/news-ani/project/}news-ani-build...
 Other repositories:
@@ -53,22 +53,23 @@ sbt-chain: module revision found in cache: com.typesafe.play#sbt-fork-run-protoc
 	found com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 in sbt-chain
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->runtime]
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->compile]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
 [A[2K[info] Resolving org.scala-lang#scala-library;2.10.4 ...
 Resolving org.scala-lang#scala-library;2.10.4 ...
 sbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4
 	found org.scala-lang#scala-library;2.10.4 in sbt-chain
 	[2.10.4] org.scala-lang#scala-library;2.10.4
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->runtime(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
 [A[2K[info] Resolving com.typesafe.play#sbt-run-support_2.10;2.3.8 ...
 Resolving com.typesafe.play#sbt-run-support_2.10;2.3.8 ...
 sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-run-support_2.10;2.3.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 sbt-chain: module revision found in cache: com.typesafe.play#sbt-run-support_2.10;2.3.8
 	found com.typesafe.play#sbt-run-support_2.10;2.3.8 in sbt-chain
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->com.typesafe.play#build-link;2.3.8 [compile->master(*)]
@@ -92,7 +93,6 @@ sbt-chain: Checking cache for: dependency: org.javassist#javassist;3.18.2-GA {co
 sbt-chain: module revision found in cache: org.javassist#javassist;3.18.2-GA
 	found org.javassist#javassist;3.18.2-GA in sbt-chain
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->compile(*)]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->runtime(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->compile]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
@@ -103,7 +103,7 @@ sbt-chain: module revision found in cache: org.javassist#javassist;3.18.2-GA
 == resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [runtime->compile]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [runtime->compile]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
 [A[2K[info] Resolving com.typesafe.sbtrc#client-2-10;0.3.1 ...
 Resolving com.typesafe.sbtrc#client-2-10;0.3.1 ...
 sbt-chain: Checking cache for: dependency: com.typesafe.sbtrc#client-2-10;0.3.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
@@ -207,19 +207,19 @@ excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [A[2K[info] Resolving org.json4s#json4s-ast_2.10;3.2.10 ...
 Resolving org.json4s#json4s-ast_2.10;3.2.10 ...
@@ -244,10 +244,10 @@ dependency descriptor has been mediated: dependency: org.scala-lang#scala-librar
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [A[2K[info] Resolving com.thoughtworks.paranamer#paranamer;2.6 ...
 Resolving com.thoughtworks.paranamer#paranamer;2.6 ...
@@ -355,7 +355,7 @@ sbt-chain: module revision found in cache: org.scala-sbt#collections;0.13.8-M3
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->compile]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->master]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->runtime(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
@@ -468,9 +468,9 @@ sbt-chain: module revision found in cache: com.google.guava#guava;16.0.1
 == resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->compile]
 == resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->master]
 == resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->master(*)]
-== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->runtime(*)]
 == resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->compile]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 [compile->default(compile)]
 [A[2K[info] Resolving org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 ...
 Resolving org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 ...
@@ -737,16 +737,16 @@ sbt-chain: module revision found in cache: org.tukaani#xz;1.4
 == resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [compile->compile(*)]
 == resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [compile->runtime(*)]
 == resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [compile->compile]
-== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->default(compile)]
-== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->runtime]
+== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->runtime(*)]
 == resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->compile]
 == resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [runtime->runtime(*)]
 == resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [runtime->compile]
-== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->master]
 == resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->runtime]
 == resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->compile]
-== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->runtime(*)]
+== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->default(compile)]
+== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->runtime]
 == resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->compile]
+== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->master]
 == resolving dependencies org.vafer#jdeb;1.3->org.apache.maven#maven-core;3.2.2 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.4 {provided=[default(compile)]}
@@ -3262,8 +3262,9 @@ resolving dependencies for configuration 'runtime'
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->default(compile)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->runtime]
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->compile]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
@@ -3273,8 +3274,7 @@ resolving dependencies for configuration 'runtime'
 == resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->master(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->compile(*)]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->compile]
@@ -3336,19 +3336,19 @@ excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->compile(*)]
@@ -3363,10 +3363,10 @@ dependency descriptor has been mediated: dependency: org.scala-lang#scala-librar
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->compile(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -3432,7 +3432,7 @@ dependency descriptor has been mediated: dependency: org.scala-lang#scala-librar
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->compile]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->master]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [runtime->runtime(*)]
@@ -5559,8 +5559,9 @@ resolving dependencies for configuration 'test'
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->default(compile)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->runtime]
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->compile]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
@@ -5570,8 +5571,7 @@ resolving dependencies for configuration 'test'
 == resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->master(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->compile(*)]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->compile]
@@ -5633,19 +5633,19 @@ excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->compile(*)]
@@ -5660,10 +5660,10 @@ dependency descriptor has been mediated: dependency: org.scala-lang#scala-librar
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->compile(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -5729,7 +5729,7 @@ dependency descriptor has been mediated: dependency: org.scala-lang#scala-librar
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->compile]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->master]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [runtime->runtime(*)]
@@ -8515,8 +8515,9 @@ resolving dependencies for configuration 'compile-internal'
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->default(compile)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->runtime]
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->compile]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
@@ -8526,8 +8527,7 @@ resolving dependencies for configuration 'compile-internal'
 == resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->master(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->compile(*)]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->compile]
@@ -8589,19 +8589,19 @@ excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->compile(*)]
@@ -8616,10 +8616,10 @@ dependency descriptor has been mediated: dependency: org.scala-lang#scala-librar
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->compile(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -8685,7 +8685,7 @@ dependency descriptor has been mediated: dependency: org.scala-lang#scala-librar
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->compile]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->master]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [runtime->runtime(*)]
@@ -11138,8 +11138,9 @@ resolving dependencies for configuration 'runtime-internal'
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->default(compile)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->runtime]
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->compile]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
@@ -11149,8 +11150,7 @@ resolving dependencies for configuration 'runtime-internal'
 == resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->master(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->compile(*)]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->compile]
@@ -11212,19 +11212,19 @@ excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->compile(*)]
@@ -11239,10 +11239,10 @@ dependency descriptor has been mediated: dependency: org.scala-lang#scala-librar
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->compile(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -11308,7 +11308,7 @@ dependency descriptor has been mediated: dependency: org.scala-lang#scala-librar
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->compile]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->master]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [runtime->runtime(*)]
@@ -13437,8 +13437,9 @@ resolving dependencies for configuration 'test-internal'
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->default(compile)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->runtime]
 == resolving dependencies com.typesafe.play#sbt-fork-run-plugin;2.3.8->com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8 [compile->compile]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 == resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
@@ -13448,8 +13449,7 @@ resolving dependencies for configuration 'test-internal'
 == resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->master(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->compile(*)]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master(compile)]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 == resolving dependencies com.typesafe.sbtrc#client-2-10;0.3.1->org.scala-lang#scala-library;2.10.4 [compile->compile]
@@ -13511,19 +13511,19 @@ excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->org.json4s#json4s-ast_2.10;3.2.10 [compile->compile(*)]
@@ -13538,10 +13538,10 @@ dependency descriptor has been mediated: dependency: org.scala-lang#scala-librar
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->master(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in compile
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 excluding dependency: org.scala-lang#scalap;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} in runtime
+dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 == resolving dependencies org.json4s#json4s-core_2.10;3.2.10->com.thoughtworks.paranamer#paranamer;2.6 [compile->compile(*)]
 dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -13607,7 +13607,7 @@ dependency descriptor has been mediated: dependency: org.scala-lang#scala-librar
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->runtime]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->compile]
 == resolving dependencies org.scala-sbt#collections;0.13.8-M3->org.scala-lang#scala-library;2.10.4 [compile->master]
-== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.sbtrc#client-2-10;0.3.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->compile]
 == resolving dependencies com.typesafe.play#sbt-fork-run-protocol_2.10;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [runtime->runtime(*)]
@@ -16267,8 +16267,8 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	[NOT REQUIRED] org.webjars#diff;1.0.7!diff.jar
 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.8-M3!sbt.jar
 	[NOT REQUIRED] org.scala-sbt#main;0.13.8-M3!main.jar
-	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.8-M3!compiler-interface-src.jar
 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.8-M3!compiler-interface-bin.jar
+	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.8-M3!compiler-interface-src.jar
 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.8-M3!compiler-interface-bin.jar
 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.8-M3!compiler-interface-bin.jar
 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8-M3!compiler-interface-bin.jar
@@ -16307,7 +16307,7 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8-M3!apply-macro.jar
 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-:: resolution report :: resolve 18635ms :: artifacts dl 393ms
+:: resolution report :: resolve 10097ms :: artifacts dl 195ms
 	report for default#news-ani-build;0.1-SNAPSHOT compile produced in /Users/hugh_sd/Projects/news-ani/project/target/resolution-cache/reports/default-news-ani-build-compile.xml
 	report for default#news-ani-build;0.1-SNAPSHOT runtime produced in /Users/hugh_sd/Projects/news-ani/project/target/resolution-cache/reports/default-news-ani-build-runtime.xml
 	report for default#news-ani-build;0.1-SNAPSHOT test produced in /Users/hugh_sd/Projects/news-ani/project/target/resolution-cache/reports/default-news-ani-build-test.xml
@@ -16321,7 +16321,7 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	report for default#news-ani-build;0.1-SNAPSHOT docs produced in /Users/hugh_sd/Projects/news-ani/project/target/resolution-cache/reports/default-news-ani-build-docs.xml
 	report for default#news-ani-build;0.1-SNAPSHOT pom produced in /Users/hugh_sd/Projects/news-ani/project/target/resolution-cache/reports/default-news-ani-build-pom.xml
 	report for default#news-ani-build;0.1-SNAPSHOT scala-tool produced in /Users/hugh_sd/Projects/news-ani/project/target/resolution-cache/reports/default-news-ani-build-scala-tool.xml
-	resolve done (18635ms resolve - 393ms download)
+	resolve done (10097ms resolve - 195ms download)
 [info] Done updating.
 Done updating.
 
@@ -16363,7 +16363,7 @@ Set current project to news-ani (in build file:/Users/hugh_sd/Projects/news-ani/
 > server-handle-next-server-request
 > {file:/Users/hugh_sd/Projects/news-ani/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@53dd9db1, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@6c5158ed, check cycles: false
 Read from stdout: Updating {file:/Users/hugh_sd/Projects/news-ani/}root...
 Updating {file:/Users/hugh_sd/Projects/news-ani/}root...
 Other repositories:
@@ -16378,7 +16378,7 @@ resolving dependencies for configuration 'compile'
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.1 [compile->default(compile)]
 Read from stdout: Resolving org.scala-lang#scala-library;2.11.1 ...
 Resolving org.scala-lang#scala-library;2.11.1 ...
-sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@40582906
+sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@3b0cf013
 sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.1
 	found org.scala-lang#scala-library;2.11.1 in sbt-chain
 	[2.11.1] org.scala-lang#scala-library;2.11.1
@@ -17441,41 +17441,43 @@ sbt-chain: module revision found in cache: org.webjars#webjars-play_2.11;2.3.0-2
 	found org.webjars#webjars-play_2.11;2.3.0-2 in sbt-chain
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->runtime]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->compile]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->master(compile)]
 Read from stdout: Resolving org.webjars#requirejs;2.1.10 ...
 Resolving org.webjars#requirejs;2.1.10 ...
 sbt-chain: Checking cache for: dependency: org.webjars#requirejs;2.1.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 sbt-chain: module revision found in cache: org.webjars#requirejs;2.1.10
 	found org.webjars#requirejs;2.1.10 in sbt-chain
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 Read from stdout: Resolving org.webjars#webjars-locator;0.19 ...
 Resolving org.webjars#webjars-locator;0.19 ...
 sbt-chain: Checking cache for: dependency: org.webjars#webjars-locator;0.19 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 sbt-chain: module revision found in cache: org.webjars#webjars-locator;0.19
 	found org.webjars#webjars-locator;0.19 in sbt-chain
-== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->master(compile)]
 Read from stdout: Resolving org.slf4j#slf4j-api;1.7.7 ...
 Resolving org.slf4j#slf4j-api;1.7.7 ...
 sbt-chain: Checking cache for: dependency: org.slf4j#slf4j-api;1.7.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 sbt-chain: module revision found in cache: org.slf4j#slf4j-api;1.7.7
 	found org.slf4j#slf4j-api;1.7.7 in sbt-chain
-== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->master(*)]
 == resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->runtime(*)]
 == resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile]
-== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
 Read from stdout: Resolving com.fasterxml.jackson.core#jackson-databind;2.3.3 ...
 Resolving com.fasterxml.jackson.core#jackson-databind;2.3.3 ...
 sbt-chain: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-databind;2.3.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-databind;2.3.3
 	found com.fasterxml.jackson.core#jackson-databind;2.3.3 in sbt-chain
+== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.0 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.0 [compile->compile(*)]
@@ -17489,7 +17491,6 @@ sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-co
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->runtime(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->compile]
-== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(*)]
 == resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->runtime(*)]
 == resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->compile]
@@ -17498,7 +17499,6 @@ sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-co
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [runtime->compile]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [runtime->runtime(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [runtime->compile]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->compile]
 == resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [runtime->runtime(*)]
@@ -18395,15 +18395,17 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->default(compile)]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->runtime]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->compile]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.0 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->master(*)]
@@ -18411,8 +18413,6 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [runtime->compile]
@@ -19182,15 +19182,17 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->default(compile)]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->runtime]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->compile]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.0 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->master(*)]
@@ -19198,8 +19200,6 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [runtime->compile]
@@ -21317,15 +21317,17 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->default(compile)]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->runtime]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->compile]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.0 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->master(*)]
@@ -21333,8 +21335,6 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [runtime->compile]
@@ -22106,15 +22106,17 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->default(compile)]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->runtime]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->compile]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.0 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->master(*)]
@@ -22122,8 +22124,6 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [runtime->compile]
@@ -22895,15 +22895,17 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->default(compile)]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->runtime]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->org.webjars#webjars-play_2.11;2.3.0-2 [compile->compile]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->master(compile)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#requirejs;2.1.10 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
 == resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->master(compile)]
+== resolving dependencies org.webjars#webjars-locator;0.19->org.slf4j#slf4j-api;1.7.7 [compile->compile(*)]
+== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.0 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->master(*)]
@@ -22911,8 +22913,6 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-annotations;2.3.2 [compile->compile(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->master(*)]
 == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.3.3->com.fasterxml.jackson.core#jackson-core;2.3.3 [compile->compile(*)]
-== resolving dependencies org.webjars#webjars-locator;0.19->com.fasterxml.jackson.core#jackson-databind;2.3.3 [compile->master(compile)]
-== resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.webjars#webjars-locator;0.19 [compile->master(compile)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)]
 == resolving dependencies org.webjars#webjars-play_2.11;2.3.0-2->org.scala-lang#scala-library;2.11.1 [runtime->compile]
@@ -24577,32 +24577,33 @@ sbt-chain: module revision found in cache: com.typesafe.play#fork-run_2.11;2.3.8
 	found com.typesafe.play#fork-run_2.11;2.3.8 in sbt-chain
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.11;2.3.8 [fork-run->runtime]
 == resolving dependencies news-ani#news-ani_2.11;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.11;2.3.8 [fork-run->compile]
-== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->master(compile)]
-== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.play#fork-run-protocol_2.11;2.3.8 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.play#fork-run-protocol_2.11;2.3.8 [compile->master(compile)]
 Read from stdout: Resolving com.typesafe.play#fork-run-protocol_2.11;2.3.8 ...
 Resolving com.typesafe.play#fork-run-protocol_2.11;2.3.8 ...
 sbt-chain: Checking cache for: dependency: com.typesafe.play#fork-run-protocol_2.11;2.3.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 sbt-chain: module revision found in cache: com.typesafe.play#fork-run-protocol_2.11;2.3.8
 	found com.typesafe.play#fork-run-protocol_2.11;2.3.8 in sbt-chain
-== resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.play#fork-run-protocol_2.11;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->master(compile)]
-== resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->com.typesafe.play#run-support_2.11;2.3.8 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->com.typesafe.play#run-support_2.11;2.3.8 [compile->master(compile)]
 Read from stdout: Resolving com.typesafe.play#run-support_2.11;2.3.8 ...
 Resolving com.typesafe.play#run-support_2.11;2.3.8 ...
 sbt-chain: Checking cache for: dependency: com.typesafe.play#run-support_2.11;2.3.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 sbt-chain: module revision found in cache: com.typesafe.play#run-support_2.11;2.3.8
 	found com.typesafe.play#run-support_2.11;2.3.8 in sbt-chain
-== resolving dependencies com.typesafe.play#run-support_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->com.typesafe.play#run-support_2.11;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#run-support_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#run-support_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#run-support_2.11;2.3.8->com.typesafe.play#build-link;2.3.8 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#run-support_2.11;2.3.8->com.typesafe.play#build-link;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [compile->master(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->master(*)]
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->compile(*)]
-== resolving dependencies com.typesafe.play#run-support_2.11;2.3.8->com.typesafe.play#build-link;2.3.8 [compile->master(compile)]
-== resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->com.typesafe.play#run-support_2.11;2.3.8 [compile->master(compile)]
-== resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->com.typesafe.sbtrc#client-2-11;0.3.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->com.typesafe.sbtrc#client-2-11;0.3.1 [compile->master(compile)]
 Read from stdout: Resolving com.typesafe.sbtrc#client-2-11;0.3.1 ...
 Resolving com.typesafe.sbtrc#client-2-11;0.3.1 ...
 sbt-chain: Checking cache for: dependency: com.typesafe.sbtrc#client-2-11;0.3.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
@@ -24864,8 +24865,7 @@ sbt-chain: module revision found in cache: org.scala-sbt#collections_2.11;0.13.8
 == resolving dependencies org.scala-sbt#collections_2.11;0.13.8-M3->org.scala-lang#scala-library;2.11.1 [compile->runtime]
 == resolving dependencies org.scala-sbt#collections_2.11;0.13.8-M3->org.scala-lang#scala-library;2.11.1 [compile->compile]
 == resolving dependencies org.scala-sbt#collections_2.11;0.13.8-M3->org.scala-lang#scala-library;2.11.1 [compile->master]
-== resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->com.typesafe.sbtrc#client-2-11;0.3.1 [compile->master(compile)]
-== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.play#fork-run-protocol_2.11;2.3.8 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->com.typesafe.sbtrc#client-2-11;0.3.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.play#fork-run-protocol_2.11;2.3.8 [compile->runtime(*)]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.play#fork-run-protocol_2.11;2.3.8 [compile->compile]
 == resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)]
@@ -24882,7 +24882,7 @@ sbt-chain: module revision found in cache: org.scala-sbt#collections_2.11;0.13.8
 == resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [runtime->compile]
 == resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->com.typesafe.sbtrc#client-2-11;0.3.1 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#fork-run-protocol_2.11;2.3.8->com.typesafe.sbtrc#client-2-11;0.3.1 [runtime->compile]
-== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.sbtrc#actor-client-2-11;0.3.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.sbtrc#actor-client-2-11;0.3.1 [compile->master(compile)]
 Read from stdout: Resolving com.typesafe.sbtrc#actor-client-2-11;0.3.1 ...
 Resolving com.typesafe.sbtrc#actor-client-2-11;0.3.1 ...
 sbt-chain: Checking cache for: dependency: com.typesafe.sbtrc#actor-client-2-11;0.3.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
@@ -24902,11 +24902,11 @@ sbt-chain: module revision found in cache: com.typesafe.akka#akka-actor_2.11;2.3
 	found com.typesafe.akka#akka-actor_2.11;2.3.8 in sbt-chain
 == resolving dependencies com.typesafe.sbtrc#actor-client-2-11;0.3.1->com.typesafe.akka#akka-actor_2.11;2.3.8 [compile->runtime]
 == resolving dependencies com.typesafe.sbtrc#actor-client-2-11;0.3.1->com.typesafe.akka#akka-actor_2.11;2.3.8 [compile->compile]
-== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.3.8->org.scala-lang#scala-library;2.11.4 [compile->compile(*)]
 == resolving dependencies com.typesafe.akka#akka-actor_2.11;2.3.8->org.scala-lang#scala-library;2.11.4 [compile->master(compile)]
-== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->master(compile)]
-== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.3.8->com.typesafe#config;1.2.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.3.8->org.scala-lang#scala-library;2.11.4 [compile->compile(*)]
+== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.akka#akka-actor_2.11;2.3.8->com.typesafe#config;1.2.1 [compile->master(compile)]
+== resolving dependencies com.typesafe.akka#akka-actor_2.11;2.3.8->com.typesafe#config;1.2.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.akka#akka-actor_2.11;2.3.8->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.akka#akka-actor_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.akka#akka-actor_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [runtime->compile]
@@ -24921,12 +24921,12 @@ sbt-chain: module revision found in cache: com.typesafe.akka#akka-testkit_2.11;2
 	found com.typesafe.akka#akka-testkit_2.11;2.3.8 in sbt-chain
 == resolving dependencies com.typesafe.sbtrc#actor-client-2-11;0.3.1->com.typesafe.akka#akka-testkit_2.11;2.3.8 [compile->runtime]
 == resolving dependencies com.typesafe.sbtrc#actor-client-2-11;0.3.1->com.typesafe.akka#akka-testkit_2.11;2.3.8 [compile->compile]
-== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->org.scala-lang#scala-library;2.11.4 [compile->compile(*)]
-== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->org.scala-lang#scala-library;2.11.4 [compile->master(compile)]
 == resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->master(compile)]
-== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->com.typesafe.akka#akka-actor_2.11;2.3.8 [compile->compile(*)]
+== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->org.scala-lang#scala-library;2.11.4 [compile->compile(*)]
+== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->com.typesafe.akka#akka-actor_2.11;2.3.8 [compile->master(compile)]
+== resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->com.typesafe.akka#akka-actor_2.11;2.3.8 [compile->compile(*)]
 == resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->com.typesafe.akka#akka-actor_2.11;2.3.8 [compile->runtime(*)]
 == resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->com.typesafe.akka#akka-actor_2.11;2.3.8 [compile->compile]
 == resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)]
@@ -24935,16 +24935,16 @@ sbt-chain: module revision found in cache: com.typesafe.akka#akka-testkit_2.11;2
 == resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->com.typesafe.akka#akka-actor_2.11;2.3.8 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.akka#akka-testkit_2.11;2.3.8->com.typesafe.akka#akka-actor_2.11;2.3.8 [runtime->compile]
 == resolving dependencies com.typesafe.sbtrc#actor-client-2-11;0.3.1->com.typesafe.akka#akka-testkit_2.11;2.3.8 [compile->master]
-== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.sbtrc#actor-client-2-11;0.3.1 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.sbtrc#actor-client-2-11;0.3.1 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.sbtrc#actor-client-2-11;0.3.1 [compile->runtime(*)]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->com.typesafe.sbtrc#actor-client-2-11;0.3.1 [compile->compile]
-== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->net.contentobjects.jnotify#jnotify;0.94 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->net.contentobjects.jnotify#jnotify;0.94 [compile->master(compile)]
 Read from stdout: Resolving net.contentobjects.jnotify#jnotify;0.94 ...
 Resolving net.contentobjects.jnotify#jnotify;0.94 ...
 sbt-chain: Checking cache for: dependency: net.contentobjects.jnotify#jnotify;0.94 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.94
 	found net.contentobjects.jnotify#jnotify;0.94 in sbt-chain
-== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->net.contentobjects.jnotify#jnotify;0.94 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->net.contentobjects.jnotify#jnotify;0.94 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->net.contentobjects.jnotify#jnotify;0.94 [compile->runtime(*)]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->net.contentobjects.jnotify#jnotify;0.94 [compile->compile]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.3.8->org.scala-lang#scala-library;2.11.1 [runtime->runtime(*)]
@@ -25146,7 +25146,7 @@ all callers are evicted for commons-logging#commons-logging;1.1.1: evicting too
 	[NOT REQUIRED] org.scala-sbt#control_2.11;0.13.8-M3!control_2.11.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.3.8!akka-actor_2.11.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.3.8!akka-testkit_2.11.jar
-:: resolution report :: resolve 12697ms :: artifacts dl 268ms
+:: resolution report :: resolve 8778ms :: artifacts dl 176ms
 	report for news-ani#news-ani_2.11;1.0-SNAPSHOT compile produced in /Users/hugh_sd/Projects/news-ani/target/resolution-cache/reports/news-ani-news-ani_2.11-compile.xml
 	report for news-ani#news-ani_2.11;1.0-SNAPSHOT runtime produced in /Users/hugh_sd/Projects/news-ani/target/resolution-cache/reports/news-ani-news-ani_2.11-runtime.xml
 	report for news-ani#news-ani_2.11;1.0-SNAPSHOT test produced in /Users/hugh_sd/Projects/news-ani/target/resolution-cache/reports/news-ani-news-ani_2.11-test.xml
@@ -25161,16 +25161,75 @@ all callers are evicted for commons-logging#commons-logging;1.1.1: evicting too
 	report for news-ani#news-ani_2.11;1.0-SNAPSHOT pom produced in /Users/hugh_sd/Projects/news-ani/target/resolution-cache/reports/news-ani-news-ani_2.11-pom.xml
 	report for news-ani#news-ani_2.11;1.0-SNAPSHOT scala-tool produced in /Users/hugh_sd/Projects/news-ani/target/resolution-cache/reports/news-ani-news-ani_2.11-scala-tool.xml
 	report for news-ani#news-ani_2.11;1.0-SNAPSHOT fork-run produced in /Users/hugh_sd/Projects/news-ani/target/resolution-cache/reports/news-ani-news-ani_2.11-fork-run.xml
-	resolve done (12697ms resolve - 268ms download)
+	resolve done (8778ms resolve - 176ms download)
 Read from stdout: Done updating.
 Done updating.
-Total time: 15 s, completed Apr 12, 2015 10:44:43 PM
+Total time: 10 s, completed Apr 16, 2015 12:04:06 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@796e653b, check cycles: false
-Total time: 0 s, completed Apr 12, 2015 10:44:45 PM
+Running task... Cancel: sbt.server.ServerTaskCancellation@378699ad, check cycles: false
+Total time: 0 s, completed Apr 16, 2015 12:04:07 AM
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/Users/hugh_sd/Projects/news-ani/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@15346a8f, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set(/Users/hugh_sd/Projects/news-ani/app/controllers/Feed.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/linkResult.template.scala, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/feed.template.scala, /Users/hugh_sd/Projects/news-ani/app/services/InMemoryUserService.java, /Users/hugh_sd/Projects/news-ani/app/services/MyEnvironment.scala, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/src_managed/main/routes_routing.scala, /Users/hugh_sd/Projects/news-ani/app/Global.java, /Users/hugh_sd/Projects/news-ani/app/services/User.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/index.template.scala, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/main.template.scala, /Users/hugh_sd/Projects/news-ani/app/controllers/Application.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/src_managed/main/controllers/routes.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/src_managed/main/routes_reverseRouting.scala)
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/Users/hugh_sd/Projects/news-ani/app/controllers/Feed.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/linkResult.template.scala, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/feed.template.scala, /Users/hugh_sd/Projects/news-ani/app/services/InMemoryUserService.java, /Users/hugh_sd/Projects/news-ani/app/services/MyEnvironment.scala, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/src_managed/main/routes_routing.scala, /Users/hugh_sd/Projects/news-ani/app/Global.java, /Users/hugh_sd/Projects/news-ani/app/services/User.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/index.template.scala, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/main.template.scala, /Users/hugh_sd/Projects/news-ani/app/controllers/Application.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/src_managed/main/controllers/routes.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/src_managed/main/routes_reverseRouting.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/Users/hugh_sd/Projects/news-ani/app/controllers/Feed.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/linkResult.template.scala, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/feed.template.scala, /Users/hugh_sd/Projects/news-ani/app/services/InMemoryUserService.java, /Users/hugh_sd/Projects/news-ani/app/services/MyEnvironment.scala, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/src_managed/main/routes_routing.scala, /Users/hugh_sd/Projects/news-ani/app/Global.java, /Users/hugh_sd/Projects/news-ani/app/services/User.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/index.template.scala, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/twirl/main/views/html/main.template.scala, /Users/hugh_sd/Projects/news-ani/app/controllers/Application.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/src_managed/main/controllers/routes.java, /Users/hugh_sd/Projects/news-ani/target/scala-2.11/src_managed/main/routes_reverseRouting.scala)
+
+Recompiling all 13 sources: invalidated sources (13) exceeded 50.0% of all sources
+Read from stdout: Compiling 7 Scala sources and 6 Java sources to /Users/hugh_sd/Projects/news-ani/target/scala-2.11/classes...
+Compiling 7 Scala sources and 6 Java sources to /Users/hugh_sd/Projects/news-ani/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 6ac579c2, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/jre/classes:/Users/hugh_sd/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.1.jar
+	-classpath
+	/Users/hugh_sd/Projects/news-ani/target/scala-2.11/classes:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/twirl-api_2.11/jars/twirl-api_2.11-1.0.2.jar:/Users/hugh_sd/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.1.jar:/Users/hugh_sd/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.3.jar:/Users/hugh_sd/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.6.jar:/Users/hugh_sd/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.3.2.jar:/Users/hugh_sd/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.1.jar:/Users/hugh_sd/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar:/Users/hugh_sd/.ivy2/cache/io.netty/netty/bundles/netty-3.9.3.Final.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.netty/netty-http-pipelining/jars/netty-http-pipelining-1.1.2.jar:/Users/hugh_sd/.ivy2/cache/org.slf4j/jul-to-slf4j/jars/jul-to-slf4j-1.7.6.jar:/Users/hugh_sd/.ivy2/cache/org.slf4j/jcl-over-slf4j/jars/jcl-over-slf4j-1.7.6.jar:/Users/hugh_sd/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.1.jar:/Users/hugh_sd/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.1.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.4.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.3.4.jar:/Users/hugh_sd/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.9.jar:/Users/hugh_sd/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/Users/hugh_sd/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/Users/hugh_sd/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.13.jar:/Users/hugh_sd/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.0.3.Final.jar:/Users/hugh_sd/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.1.0.Final.jar:/Users/hugh_sd/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.0.0.jar:/Users/hugh_sd/.ivy2/cache/org.jboss.logging/jboss-logging/jars/jboss-logging-3.2.0.Final.jar:/Users/hugh_sd/.ivy2/cache/org.springframework/spring-context/jars/spring-context-4.0.3.RELEASE.jar:/Users/hugh_sd/.ivy2/cache/org.springframework/spring-core/jars/spring-core-4.0.3.RELEASE.jar:/Users/hugh_sd/.ivy2/cache/org.springframework/spring-beans/jars/spring-beans-4.0.3.RELEASE.jar:/Users/hugh_sd/.ivy2/cache/org.javassist/javassist/bundles/javassist-3.19.0-GA.jar:/Users/hugh_sd/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.8.jar:/Users/hugh_sd/.ivy2/cache/com.google.guava/guava/bundles/guava-16.0.1.jar:/Users/hugh_sd/.ivy2/cache/dom4j/dom4j/jars/dom4j-1.6.1.jar:/Users/hugh_sd/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-2.0.3.jar:/Users/hugh_sd/.ivy2/cache/org.apache.tomcat/tomcat-servlet-api/jars/tomcat-servlet-api-8.0.5.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/com.jolbox/bonecp/bundles/bonecp-0.8.0.RELEASE.jar:/Users/hugh_sd/.ivy2/cache/com.h2database/h2/jars/h2-1.3.175.jar:/Users/hugh_sd/.ivy2/cache/tyrex/tyrex/jars/tyrex-1.0.1.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-java-ebean_2.11/jars/play-java-ebean_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/jars/avaje-ebeanorm-3.3.4.jar:/Users/hugh_sd/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm-agent/jars/avaje-ebeanorm-agent-3.2.2.jar:/Users/hugh_sd/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/jars/hibernate-jpa-2.0-api-1.0.1.Final.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/net.sf.ehcache/ehcache-core/jars/ehcache-core-2.6.8.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.3.8.jar:/Users/hugh_sd/.ivy2/cache/com.ning/async-http-client/jars/async-http-client-1.8.15.jar:/Users/hugh_sd/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/Users/hugh_sd/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/Users/hugh_sd/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.0.1.jar:/Users/hugh_sd/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.0.1.jar:/Users/hugh_sd/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar:/Users/hugh_sd/.ivy2/cache/org.webjars/webjars-play_2.11/jars/webjars-play_2.11-2.3.0-2.jar:/Users/hugh_sd/.ivy2/cache/org.webjars/requirejs/jars/requirejs-2.1.10.jar:/Users/hugh_sd/.ivy2/cache/org.webjars/webjars-locator/jars/webjars-locator-0.19.jar:/Users/hugh_sd/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.7.jar:/Users/hugh_sd/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.3.3.jar:/Users/hugh_sd/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.3.3.jar:/Users/hugh_sd/.ivy2/cache/org.webjars/bootstrap/jars/bootstrap-3.3.4.jar:/Users/hugh_sd/.ivy2/cache/org.webjars/jquery/jars/jquery-1.11.1.jar:/Users/hugh_sd/.ivy2/cache/org.webjars/bootswatch-cerulean/jars/bootswatch-cerulean-3.3.1+2.jar:/Users/hugh_sd/.ivy2/cache/org.webjars/html5shiv/jars/html5shiv-3.7.2.jar:/Users/hugh_sd/.ivy2/cache/org.webjars/respond/jars/respond-1.4.2.jar:/Users/hugh_sd/.ivy2/cache/ws.securesocial/securesocial_2.11/jars/securesocial_2.11-master-SNAPSHOT.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play/filters-helpers_2.11/jars/filters-helpers_2.11-2.3.7.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play.plugins/play-plugins-util_2.11/jars/play-plugins-util_2.11-2.3.0.jar:/Users/hugh_sd/.ivy2/cache/com.typesafe.play.plugins/play-plugins-mailer_2.11/jars/play-plugins-mailer_2.11-2.3.0.jar:/Users/hugh_sd/.ivy2/cache/org.apache.commons/commons-email/jars/commons-email-1.3.2.jar:/Users/hugh_sd/.ivy2/cache/javax.mail/mail/jars/mail-1.4.5.jar:/Users/hugh_sd/.ivy2/cache/javax.activation/activation/jars/activation-1.1.1.jar:/Users/hugh_sd/.ivy2/cache/org.mindrot/jbcrypt/jars/jbcrypt-0.3m.jar:/Users/hugh_sd/.ivy2/cache/org.twitter4j/twitter4j-core/jars/twitter4j-core-4.0.3.jar:/Users/hugh_sd/.ivy2/cache/com.rometools/rome/jars/rome-1.5.0.jar:/Users/hugh_sd/.ivy2/cache/com.rometools/rome-utils/jars/rome-utils-1.5.0.jar:/Users/hugh_sd/.ivy2/cache/org.jdom/jdom/jars/jdom-2.0.2.jar
+Read from stdout: there were 1 feature warning(s); re-run with -feature for details
+there were 1 feature warning(s); re-run with -feature for details
+Read from stdout: one warning found
+one warning found
+Scala compilation took 14.783683325 s
+Attempting to call com.sun.tools.javac.api.JavacTool@423ff78f directly...
+Read from stdout: /Users/hugh_sd/Projects/news-ani/app/controllers/Feed.java:148: cannot find symbol
+Read from stdout: symbol:   method async(play.libs.F.Promise<play.mvc.Result>)
+Read from stdout: location: class controllers.Feed
+/Users/hugh_sd/Projects/news-ani/app/controllers/Feed.java:148: cannot find symbol
+  symbol:   method async(play.libs.F.Promise<play.mvc.Result>)
+  location: class controllers.Feed
+Read from stdout: async
+async
+Read from stdout: /Users/hugh_sd/Projects/news-ani/app/controllers/Application.java: /Users/hugh_sd/Projects/news-ani/app/controllers/Application.java uses unchecked or unsafe operations.
+/Users/hugh_sd/Projects/news-ani/app/controllers/Application.java: /Users/hugh_sd/Projects/news-ani/app/controllers/Application.java uses unchecked or unsafe operations.
+Read from stdout: /Users/hugh_sd/Projects/news-ani/app/controllers/Application.java: Recompile with -Xlint:unchecked for details.
+/Users/hugh_sd/Projects/news-ani/app/controllers/Application.java: Recompile with -Xlint:unchecked for details.
+Total time: 20 s, completed Apr 16, 2015 12:04:47 AM
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -25179,4 +25238,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 30414@Hieus-MacBook-Pro.local logs at Sun Apr 12 22:46:49 PDT 2015, goodbye.
+Closing the 1319@Hieus-MacBook-Pro.local logs at Thu Apr 16 00:06:31 PDT 2015, goodbye.

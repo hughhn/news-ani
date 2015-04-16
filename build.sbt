@@ -25,5 +25,3 @@ libraryDependencies ++= Seq(
   "com.rometools" % "rome" % "1.5.0"
 )
 
-
-fork in run := true

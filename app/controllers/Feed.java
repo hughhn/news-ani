@@ -1,12 +1,15 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.rometools.rome.feed.synd.SyndEntry;
 import com.rometools.rome.feed.synd.SyndFeed;
 import com.rometools.rome.io.FeedException;
 import com.rometools.rome.io.SyndFeedInput;
 import com.typesafe.config.ConfigFactory;
 import play.*;
+import play.libs.F;
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import securesocial.core.OAuth1Info;
@@ -18,8 +21,10 @@ import views.html.feed;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.ConnectException;
 import java.net.URL;
 import java.util.*;
+import java.util.concurrent.TimeoutException;
 
 import play.libs.ws.*;
 import play.libs.F.Promise;
@@ -126,22 +131,52 @@ public class Feed extends Controller {
 
         WSRequestHolder holder = WS
                 .url(api)
+                .setTimeout(2000)
                 .setQueryParameter("url", url);
         return holder.get().map(response -> response.asJson());
     }
 
     @SecuredAction
-    public static Result list() {
+    public static Promise<Result> list() {
         User user = (User) ctx().args.get(SecureSocial.USER_KEY);
 
         List<SyndEntry> entries = getSyndFeeds();
-        List<Item> items = new ArrayList<>();
-        for (SyndEntry entry : entries) {
+
+        List<Promise<JsonNode>> list = new ArrayList<>();
+        for (final SyndEntry entry : entries) {
             Promise<JsonNode> metadataJson = getMetadata(entry.getLink());
-            items.add(new Item(entry, metadataJson.get(1000).get("url").toString()));
+            metadataJson.recover(throwable -> {
+                if (throwable instanceof TimeoutException) {
+                    logger.debug("TimeoutException: " + entry.getLink());
+                } else if (throwable instanceof ConnectException) {
+                    logger.debug("ConnectException: " + entry.getLink());
+                }
+                ObjectNode result = Json.newObject();
+                result.put("url", "no metadata");
+                return result;
+            });
+            list.add(metadataJson);
         }
 
-        return ok(feed.render(user, getTweets(), items));
+        Promise<List<JsonNode>> promises = Promise.sequence(list);
+        return promises.map(new F.Function<List<JsonNode>, Result>() {
+            @Override
+            public Result apply(List<JsonNode> jsonNodes) throws Throwable {
+                List<String> items = new ArrayList<String>();
+                for (JsonNode node : jsonNodes) {
+                    items.add(node.get("url").toString());
+                }
+                return ok(feed.render(user, getTweets(), items));
+            }
+        }).recover(throwable -> {
+            if (throwable instanceof TimeoutException) {
+                logger.debug("promises TimeoutException!");
+            } else if (throwable instanceof ConnectException) {
+                logger.debug("promises ConnectException!");
+            }
+            List<String> items = new ArrayList<String>();
+            return ok(feed.render(user, getTweets(), items));
+        });
     }
 
 

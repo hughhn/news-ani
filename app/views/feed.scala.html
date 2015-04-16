@@ -1,4 +1,4 @@
-@(user: services.User, tweets: List[twitter4j.Status], items: List[controllers.Feed.Item])
+@(user: services.User, tweets: List[twitter4j.Status], items: List[String])
 
 @main("ChompChomp") {
 <div class="page-header">
@@ -22,7 +22,7 @@
 
     <ul>
         @for(item <- items) {
-        <li><b>@item.entry.getTitle()</b>: @item.metadata</li>
+        <li><b>@item</b></li>
         }
     </ul>
 </div>
