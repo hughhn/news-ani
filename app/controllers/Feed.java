@@ -131,7 +131,7 @@ public class Feed extends Controller {
 
         WSRequestHolder holder = WS
                 .url(api)
-                .setTimeout(2000)
+                //.setTimeout(2000)
                 .setQueryParameter("url", url);
         return holder.get().map(response -> response.asJson());
     }
