@@ -156,6 +156,9 @@ public class Feed extends Controller {
                 return result;
             });
             list.add(metadataJson);
+
+            // TODO : only analyze 1 article for now
+            break;
         }
 
         Promise<List<JsonNode>> promises = Promise.sequence(list);
